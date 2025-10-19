@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/Z1srPv7lOy9C27hHQ+Xp8a4MxAQ5a+W5AQbZUU+QAY+R8YFH3y+XWhaQdF5eCNIsow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Pin Matcher</title>
+</head>
+<body>
+    <div class="container">
+        <!-- generated pin section -->
+        <div class="half-width g-col-6">
+            <input type="text" class="input-box1" name = "generate" id="generate-pin" readonly>
+            <div >
+                <button class="btn" type="button" onclick="generatedPin()">Generated Pin</button>
+            </div>
+        </div>
+
+        <!-- match pin section -->
+         <div class="half-width">
+             <form action="">
+             <div class="submit-area">
+                    <input type="text" readonly  class="input-box2" type="text" name ="display" id="typed-pin">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="display.value += '7' ">
+                <input type="button" value="8" onclick="display.value += '8' ">
+                <input type="button" value="9" onclick="display.value += '9' ">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="display.value += '4' ">
+                <input type="button" value="5" onclick="display.value += '5' ">
+                <input type="button" value="6" onclick="display.value += '6' ">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="display.value += '1' ">
+                <input type="button" value="2" onclick="display.value += '2' ">
+                <input type="button" value="3" onclick="display.value += '3' ">
+            </div>
+            <div>
+                <input type="button" value="<" onclick="display.value = display.value.slice(0, -1) " class = "operator-btn">
+                <input type="button" value="0" onclick="display.value += '0' ">
+                <input type="button" value="C" onclick="display.value = '' " class = "operator-btn">
+            </div>
+            <div class="submit-btn">
+                <button type="button" value="Submit" onclick="verifyPin()" class = "operator-btn" >Submit</button>
+            </div>
+            
+        </form>
+         </div>
+       <br>
+        
+        <div class="notification-area">
+            <div id="pin-success" class="alert alert-success" role="alert">
+                <strong>Success!</strong> Pin Matched Successfully.
+            </div>
+            <div id="pin-failure" class="alert alert-danger" role="alert">
+                <strong>Failed!</strong> Pin Didn't Match. Please Try Again.
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
