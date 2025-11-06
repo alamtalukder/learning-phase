@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion with this</title>
+</head>
+<body>
+
+    <h2>this operation</h2>
+    <p onclick="this.innerText= add(10,32) ">The paragraphp don't click</p>
+    <script>
+        const myobject={
+            name : "kuddus", 
+            getFullName: function(){
+                console.log(this); 
+                return 'Mr is.' + this.name; 
+            }
+        }
+        const anotherObjcet ={
+            name: "Biddut Ali",  
+        }
+       anotherObjcet.getFullName = myobject.getFullName; 
+       console.log(anotherObjcet, myobject); 
+       myobject.getFullName(); 
+       anotherObjcet.getFullName(); 
+
+       function add(num1,num2){
+        return num1 + num2; 
+       }
+
+    </script>
+</body>
+</html>
