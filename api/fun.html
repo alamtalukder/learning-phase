@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with API-Activity</title>
+</head>
+<body>
+    <h1 id="activity"></h1>
+    <h1>Take a class</h1>
+    <h3>Learn from: <a href="">Visit this site</a></h3>
+
+    <script>
+        function doSomething(){
+            fetch('https://bored-api.appbrewery.com/random')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('activity').innerText = data.activity;
+        })
+        }
+        doSomething();
+        setInterval(() => {
+            doSomething();
+        }, 2000);
+    </script>
+</body>
+</html>
