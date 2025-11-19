@@ -60,11 +60,51 @@
 //     console.log("shanti nai");
 // }
 
-const laptop = {
-    brand: "Dell",
-    model: "XPS 13",
-    year: 2022
+// const laptop = {
+//     brand: "Dell",
+//     model: "XPS 13",
+//     year: 2022
+// }
+
+// const entries = Object.entries(laptop); 
+// console.log(entries);
+
+// const profile = {
+//     name: "Emma Watson",
+//     age: 33,
+//     profession: "Actress", 
+//     height: "5.5ft", 
+//     country: "UK", 
+//     weight: "55kg"
+// }
+
+// for(const key in profile){
+//     const values = profilekey];
+//     console.log(key, ":", values); 
+// }
+
+
+// const student = {
+//     name: "Sakib Al Hasan",
+//     age: 34,
+//     salary: 40000   
+// };
+// const keys = Object.keys(student); 
+// for( const key of keys){
+//     const value = student[key];
+//     console.log(key, ":", value);
+// }
+
+const doctor = {
+    name: "Elan Musk", 
+    age: 23, 
+    experience: 12, 
+    jobAddress: "Dhaka", 
 }
 
-const entries = Object.entries(laptop); 
-console.log(entries);
+const keys = Object.keys(doctor);
+
+for (const key of keys) {
+    
+    console.log(key, ":", doctor[key]); 
+}
