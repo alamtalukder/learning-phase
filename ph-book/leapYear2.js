@@ -1,0 +1,13 @@
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+const leapYear1 = isLeapYear(2020);
+const leapYear2 = isLeapYear(1900);
+const leapYear3 = isLeapYear(2000);
+console.log(leapYear1);
+console.log(leapYear2);
+console.log(leapYear3);
